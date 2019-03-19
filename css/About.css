@@ -1,0 +1,66 @@
+#intro-about {
+    background-image: url(images/1banner-hdcs-2.jpg);
+    background-position: 26% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 30px
+}
+
+#content{
+    padding: 20px;
+} 
+.animated{
+    animation-duration: 3s;
+}
+
+.line-bottom{
+    z-index: 2;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align: center;
+    display: block;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #5e5e5e;
+    font-size: 24px;
+}
+
+h2.line-bottom::before{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    display: block;
+    width: 1%;
+    height: 1032px;
+    border-left: 2px solid #ccc;
+    content: "";
+    margin: auto
+}
+
+#intro h1{
+    padding: 50px; 
+    color: white;
+}
+
+.inner-content-1{
+    width: auto;
+    height: 314px;
+    margin: 15px 0;
+    
+}
+
+.inner-content-2{
+    display: block ;
+    margin: auto;
+}
+
+.inner-images-1{
+    display: block;
+}
+
+.inner-images-2{
+    width: 471px;
+    margin: 15px 0;
+}
