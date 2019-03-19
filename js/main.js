@@ -27,6 +27,7 @@
 	var navHeight = nav.outerHeight();
 
 	/*--/ ScrollReveal /Easy scroll animations for web and mobile browsers /--*/
+	/*--/ ScrollReveal Logo Home page /--*/
 	window.sr = ScrollReveal();
 	sr.reveal('.foo', { duration: 1000, delay: 15 });
 
@@ -43,16 +44,15 @@
 	});
 
 	/*--/ Animate Carousel /--*/
+	/*--/ Effect text banner/--*/
 	$('.intro-carousel').on('translate.owl.carousel', function () {
 		$('.intro-content .intro-title').removeClass('zoomIn animated').hide();
 		$('.intro-content .intro-price').removeClass('fadeInUp animated').hide();
-		$('.intro-content .intro-title-top, .intro-content .spacial').removeClass('fadeIn animated').hide();
 	});
 
 	$('.intro-carousel').on('translated.owl.carousel', function () {
 		$('.intro-content .intro-title').addClass('zoomIn animated').show();
 		$('.intro-content .intro-price').addClass('fadeInUp animated').show();
-		$('.intro-content .intro-title-top, .intro-content .spacial').addClass('fadeIn animated').show();
 	});
 
 	/*--/ Navbar Collapse /--*/
@@ -63,6 +63,16 @@
 		$('body').removeClass('box-collapse-open').addClass('box-collapse-closed');
 		$('.menu-list ul').slideUp(700);
 	});
+
+	/*--/ Cart Collapse /--*/
+	$('.navbar-toggle-box-collapse-cart').on('click', function () {
+		$('body').removeClass('box-collapse-cart-closed').addClass('box-collapse-cart-open');
+	});
+	$('.close-box-collapse-cart, .click-closed').on('click', function () {
+		$('body').removeClass('box-collapse-cart-open').addClass('box-collapse-cart-closed');
+		$('.menu-list ul').slideUp(700);
+	});
+
 
 	/*--/ Navbar Menu Reduce /--*/
 	$(window).trigger('scroll');
