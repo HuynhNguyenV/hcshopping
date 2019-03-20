@@ -61,19 +61,9 @@
 	});
 	$('.close-box-collapse, .click-closed').on('click', function () {
 		$('body').removeClass('box-collapse-open').addClass('box-collapse-closed');
-		$('.menu-list ul').slideUp(700);
+		// $('.menu-list ul').slideUp(700);
 	});
-
-	/*--/ Cart Collapse /--*/
-	$('.navbar-toggle-box-collapse-cart').on('click', function () {
-		$('body').removeClass('box-collapse-cart-closed').addClass('box-collapse-cart-open');
-	});
-	$('.close-box-collapse-cart, .click-closed').on('click', function () {
-		$('body').removeClass('box-collapse-cart-open').addClass('box-collapse-cart-closed');
-		$('.menu-list ul').slideUp(700);
-	});
-
-
+	
 	/*--/ Navbar Menu Reduce /--*/
 	$(window).trigger('scroll');
 	$(window).bind('scroll', function () {
