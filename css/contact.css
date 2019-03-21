@@ -1,0 +1,33 @@
+#img-map{
+    display: block;
+}
+
+#img-map a img{
+    width:540px 
+}
+
+#contact-content{
+    padding: 15px;
+    height: 472px;
+}
+
+#btn-google{
+    background-color: #d95434;
+    color: white;
+}
+
+#google {
+    height: 24px;
+}
+
+#youtube{
+    height: 24px;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+.animated{
+    animation-duration: 3s
+}
