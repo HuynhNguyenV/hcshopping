@@ -53,22 +53,6 @@ body {
     vertical-align: middle;
   }
   
-  .link-a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .link-a:hover {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .link-a span {
-    font-size: 18px;
-    vertical-align: middle;
-    margin-left: 5px;
-  }
-  
   .text-brand {
     color: #000000;
     font-size: 2rem;
@@ -239,31 +223,6 @@ body {
   }
   
   /*------/ Title /------*/
-  
-  .title-wrap {
-    padding-bottom: 4rem;
-  }
-  
-  .title-a {
-    font-size: 2.6rem;
-    font-weight: 600;
-  }
-  
-  .title-link {
-    font-size: 1.2rem;
-    font-weight: 300;
-    padding-top: 1.2rem;
-  }
-  
-  .title-link a {
-    color: #313131;
-  }
-  
-  .title-link span {
-    font-size: 20px;
-    padding-left: 4px;
-    vertical-align: middle;
-  }
   
   .title-box-d {
     padding-bottom: 1.8rem;
@@ -668,19 +627,6 @@ body {
     transition: all 500ms ease;
   }
   
-  .navbar-default .dropdown .dropdown-menu .dropdown-item.active {
-    background-color: #ffffff;
-    color: #E82C0C;
-  }
-  
-  .navbar-default .dropdown:hover .dropdown-menu {
-    -webkit-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    visibility: visible;
-    opacity: 1;
-    filter: alpha(opacity=1);
-  }
-  
   /*------/ Hamburger Navbar /------*/
   
   .navbar-toggler {
@@ -1006,95 +952,16 @@ body {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 27%, rgba(0, 0, 0, 0.65) 90%);
   }
   
-  /*======================================
-  //--//-->   PROPERTY - CARD-A
-  ======================================*/
-  
-  .card-overlay-a-content {
-    transition: all .5s ease-in;
-    position: absolute;
-    width: 100%;
-    bottom: 0px;
-    z-index: 2;
-  }
-  
-  .card-header-a {
-    padding: 0 1rem;
-  }
-  
-  .card-header-a .card-title-a {
-    color: #ffffff;
-    margin-bottom: 0;
-    padding-bottom: .7rem;
-  }
-  
-  .card-header-a .card-title-a a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  .card-body-a {
-    z-index: 2;
-    transition: all .5s ease-in;
-    padding: 0rem 1rem 2rem 1rem;
-  }
-  
-  .card-body-a .price-box {
-    padding-bottom: .5rem;
-  }
-  
-  .price-a {
-    color: #ffffff;
-    padding: .6rem .8rem;
-    border: 2px solid #E82C0C;
-    border-radius: 50px;
-    text-transform: uppercase;
-    letter-spacing: 0.030em;
-  }
-  
-  .card-footer-a {
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    background-color: #E82C0C;
-  }
-  
-  .card-info {
-    list-style: none;
-    margin-bottom: 0;
-    padding: .5rem 0;
-  }
-  
-  .card-info .card-info-title {
-    font-size: 1rem;
-    color: #313131;
-  }
-  
-  .card-info li span {
-    color: #ffffff;
-    font-size: .9rem;
-  }
-  
   /*------/ Property Grid /-----*/
   
-  .property-grid .grid-option {
-    text-align: right;
+  .property-grid {
+    text-align: left;
     margin-bottom: 2rem;
   }
   
-  .property-grid .grid-option .custom-select {
+  .property-grid .custom-select {
     border-radius: 0;
     width: 200px;
-    border-color: #313131;
-  }
-  
-  .property-grid .grid-option .custom-select:hover,
-  .property-grid .grid-option .custom-select:active,
-  .property-grid .grid-option .custom-select:focus {
-    border-color: #313131;
-  }
-  
-  .property-grid .grid-option .custom-select option {
     border-color: #313131;
   }
   
@@ -1764,14 +1631,6 @@ body {
       font-size: 1.3rem;
     }
   
-    .card-info .card-info-title {
-      font-size: .9rem;
-    }
-  
-    .card-info li span {
-      font-size: .8rem;
-    }
-  
     .card-header-b {
       bottom: 0px;
     }
@@ -1877,14 +1736,6 @@ body {
   
     .card-header-a .card-title-a {
       font-size: 2rem;
-    }
-  
-    .card-info .card-info-title {
-      font-size: 1rem;
-    }
-  
-    .card-info li span {
-      font-size: 1rem;
     }
   
     .card-header-b {

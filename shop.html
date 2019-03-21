@@ -21,6 +21,7 @@
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/property.css">
+    <link rel="stylesheet" href="css/card-product.css">
     <title>HC Shopping</title>
     <style>
         /* Make the image fully responsive */
@@ -161,17 +162,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="shop.html" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="shop.html">Jeans</a>
-                            <a class="dropdown-item" href="shop.html">T-Shirts</a>
-                            <a class="dropdown-item" href="shop.html">Jumpers & Cardigans</a>
-                            <a class="dropdown-item" href="shop.html">Shirts</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="blog-grid.html">Blog</a>
@@ -213,7 +205,12 @@
                 <div class="col-md-12 col-lg-8">
                     <div class="title-single-box">
                         <h1 class="title-single">Shopping</h1>
-                        <span class="color-text-a">Man</span>
+                        <ul class="nav nav-tabs justify-content-center">
+                            <li class="nav-item active p-3"><a data-toggle="tab" href="#all">All</a></li>
+                            <li class="nav-item p-3"><a data-toggle="tab" href="#jeans">Jeans</a></li>
+                            <li class="nav-item p-3"><a data-toggle="tab" href="#shirts">Shirts</a></li>
+                            <li class="nav-item p-3"><a data-toggle="tab" href="#trousers">Trousers</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-4">
@@ -236,386 +233,811 @@
     <!--/ Property Grid Star /-->
     <section class="property-grid grid">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="grid-option">
-                        <form>
-                            <select class="custom-select">
-                                <option selected>All</option>
-                                <option value="1">New to Old</option>
-                                <option value="2">For Rent</option>
-                                <option value="3">High to Low</option>
-                                <option value="4">Low to High</option>
-                            </select>
-                        </form>
+            <div class="tab-content">
+                <div id="all" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class=" col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-1.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-1.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-1.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-1.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-3.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-3.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-4.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-4.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-1.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-1.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-1.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-1.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-3.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-3.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-4.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-4.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="product-details-4.html">Tailored Jeans</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex py-3">
+                                                <a href="#"><span class="price-a">Buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-4.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-facebook"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-twitter"></i>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-instagram"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="pagination-a">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <span class="ion-ios-arrow-back"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">3</a>
+                                    </li>
+                                    <li class="page-item next">
+                                        <a class="page-link" href="#">
+                                            <span class="ion-ios-arrow-forward"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
+                <div id="jeans" class="tab-pane fade">
+                    <div class="row">
+                        <div class=" col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
                                 </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-1.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <a href="product-details-1.html" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
                                 </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-2.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-3.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="#" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="pagination-a">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <span class="ion-ios-arrow-back"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item next">
+                                        <a class="page-link" href="#">
+                                            <span class="ion-ios-arrow-forward"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
+                    </div>
+                </div>
+                <div id="shirts" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
                                 </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-3.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <a href="product-details-2.html" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
                                 </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="#" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="pagination-a">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <span class="ion-ios-arrow-back"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item next">
+                                        <a class="page-link" href="#">
+                                            <span class="ion-ios-arrow-forward"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
+                    </div>
+                </div>
+                <div id="trousers" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
                                 </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-2.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <a href="product-details-3.html" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
                                 </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-3.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="product-details-3.html" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
+                                </div>
+                                <div class="card-overlay">
+                                    <div class="card-overlay-a-content">
+                                        <div class="card-header-a">
+                                            <h2 class="card-title-a">
+                                                <a href="#">206 Mount
+                                                    <br /> Olive Road Two</a>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body-a">
+                                            <div class="price-box d-flex">
+                                                <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                            </div>
+                                            <a href="#" class="link-a">Click here to view
+                                                <span class="ion-ios-arrow-forward"></span>
+                                            </a>
+                                        </div>
+                                        <div class="card-footer-a">
+                                            <ul class="card-info d-flex justify-content-around">
+                                                <li>
+                                                    <h4 class="card-info-title">Size</h4>
+                                                    <span>XL</span>
+                                                </li>
+                                                <li>
+                                                    <h4 class="card-info-title">View</h4>
+                                                    <span>4000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="pagination-a">
+                                <ul class="pagination justify-content-end">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">
+                                            <span class="ion-ios-arrow-back"></span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">1</a>
+                                    </li>
+                                    <li class="page-item next">
+                                        <a class="page-link" href="#">
+                                            <span class="ion-ios-arrow-forward"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-box-a card-shadow">
-                        <div class="img-box-a">
-                            <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="card-overlay-a-content">
-                                <div class="card-header-a">
-                                    <h2 class="card-title-a">
-                                        <a href="#">206 Mount
-                                            <br /> Olive Road Two</a>
-                                    </h2>
-                                </div>
-                                <div class="card-body-a">
-                                    <div class="price-box d-flex">
-                                        <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                    </div>
-                                    <a href="#" class="link-a">Click here to view
-                                        <span class="ion-ios-arrow-forward"></span>
-                                    </a>
-                                </div>
-                                <div class="card-footer-a">
-                                    <ul class="card-info d-flex justify-content-around">
-                                        <li>
-                                            <h4 class="card-info-title">Size</h4>
-                                            <span>XL</span>
-                                        </li>
-                                        <li>
-                                            <h4 class="card-info-title">View</h4>
-                                            <span>4000</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <nav class="pagination-a">
-                        <ul class="pagination justify-content-end">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">
-                                    <span class="ion-ios-arrow-back"></span>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item next">
-                                <a class="page-link" href="#">
-                                    <span class="ion-ios-arrow-forward"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
             </div>
         </div>
     </section>
     <!--/ Property Grid End /-->
-
-
 
     <!--/ footer Star /-->
     <section class="section-footer">
