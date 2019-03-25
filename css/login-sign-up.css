@@ -1,0 +1,21 @@
+#box-login-sign{
+    border-right: 2px solid black;
+}
+
+#login button{
+    width: 100%;
+}
+
+#sign-up button{
+    width: 100%;
+}
+
+#lw-title{
+    margin: 0 20px;
+}
+
+#login-with button{
+    width: 100%; 
+    margin-bottom: 15px;
+    color:white
+}
