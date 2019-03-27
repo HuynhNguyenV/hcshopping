@@ -15,9 +15,6 @@
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Login-sign-up CSS File -->
-    <link rel="stylesheet" href="css/login-sign-up.css">
-
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -189,155 +186,77 @@
             <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block">
                 <span class="fa fa-cart-plus"></span>
             </button>
-            <button type="button" class="btn btn-b-n" data-toggle="modal" data-target="#login-sign-up">
+            <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block">
                 <span class="fa fa-user"></span>
             </button>
         </div>
     </nav>
     <!--/ Nav End /-->
 
-    <!--/ Intro Single star /-->
-    <section class="intro-single">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-8">
-                    <div class="title-single-box">
-                        <h1 class="title-single">Login</h1>
+        <!--/ Intro Single star /-->
+        <section class="intro-single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8">
+                        <div class="title-single-box">
+                            <h1 class="title-single">Login</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Login
+                                </li>
+                            </ol>
+                        </nav>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-4">
-                    <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                Login
-                            </li>
-                        </ol>
-                    </nav>
+            </div>
+        </section>
+        <!--/ Intro Single End /-->
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6" style="border-right: 2px solid black">
+                <form action="">
+                    <div class="form-group">
+                        <label for="user">User :</label>
+                        <input type="text" class="form-control" id="user" placeholder="Enter your Id or Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password :</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox">Remember me ?</label>
+                    </div>
+                    <div>
+                        <button style="width: 100%" class="btn btn-default">Login</button>
+                    </div>
+                    <div>
+                        <a href="#">Forget your password ?</a><br>
+                        <a href="#">Sign up !!</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <div style="margin: 0 20px">
+                    <h4>LOGIN WITH</h3>
+                </div>
+                <hr>
+                <div id="login-with" style="margin: 0 100px;">
+                    <a href="#"><button style="width: 100%; margin-bottom: 15px" class="btn btn-primary">FACEBOOK</button></a>
+                    <a href="#"><button style="width: 100%; margin-bottom: 15px; background-color: orangered" class="btn btn-default">GOOGLE</button></a>
+                    <a href="#"><button style="width: 100%; margin-bottom: 15px" class="btn btn-info">Twitter</button></a>
                 </div>
             </div>
         </div>
     </section>
-    <!--/ Intro Single End /-->
-
-    <!-- begin modal -->
-    <div class="modal fade" id="login-sign-up" role="dialog ">
-        <div class="modal-dialog modal-lg">
-            <!-- begin modal content -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <!-- bengin modal body -->
-                <div class="modal-body">
-
-                    <div class="row">
-
-                        <div id="box-login-sign" class="col-md-7">
-
-                            <ul class="nav nav-tabs nav-pills">
-                                <li ><a href="#login" class="nav-link active" data-toggle="tab">Login </a></li>
-                                <li><a href="#sign-up" class="nav-link" data-toggle="tab">Sign in</a></li>
-                            </ul>
-
-                            <!-- begin tab content -->
-                            <div class="tab-content">
-                                <!-- begin login -->
-                                <div id="login" class="tab-pane fade-in active">
-                                    <form action="">
-                                        <div class="form-group">
-                                            <label for="user">User :</label>
-                                            <input type="text" class="form-control" id="user"
-                                                placeholder="Enter your Id or Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password :</label>
-                                            <input type="password" class="form-control" id="password"
-                                                placeholder="Enter your password">
-                                        </div>
-                                        <div class="checkbox">
-                                            <label><input type="checkbox">Remember me ?</label>
-                                        </div>
-                                        <div>
-                                            <button class="btn btn-success">Login</button>
-                                        </div>
-                                        <div>
-                                            <a href="#">Forget your password ?</a><br>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- end login -->
-
-                                <!-- begin sign up -->
-                                <div id="sign-up" class="tab-pane fade">
-                                    <form action="">
-                                        <div class="form-group">
-                                            <label for="user">User :</label>
-                                            <input type="text" class="form-control" id="user-sign"
-                                                placeholder="Enter your user">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone-number">Phone number :</label>
-                                            <input type="text" class="form-control" id="phone-number-sign"
-                                                placeholder="Enter your password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email :</label>
-                                            <input type="text" class="form-control" id="email-sign"
-                                                placeholder="Enter your Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password :</label>
-                                            <input type="password" class="form-control" id="password-sign"
-                                                placeholder="Enter your password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="re-password">Repassword :</label>
-                                            <input type="password" class="form-control" id="re-password-sign"
-                                                placeholder="Enter your password again">
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <button class="btn btn-success">Sign In</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <!-- end sign up -->
-
-                            </div>
-                            <!-- end tab content -->
-                        </div>
-
-                        <div class="col-md-5">
-                            <div id="lw-title">
-                                <h4>LOGIN WITH</h3>
-                            </div>
-                            <hr>
-                            <div id="login-with">
-                                <a href="#"><button
-                                        style="background-color:#4267b2;"
-                                        class="btn btn-default">FACEBOOK</button></a>
-                                <a href="#"><button
-                                        style="background-color: orangered;"
-                                        class="btn btn-default">GOOGLE</button></a>
-                                <a href="#"><button
-                                        style="background-color: #55aded;"
-                                        class="btn btn-default">Twitter</button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- end modal body -->
-
-            </div>
-            <!-- end modal content -->
-
-        </div>
-    </div>
 
     <!--/ footer Star /-->
     <section class="section-footer">
