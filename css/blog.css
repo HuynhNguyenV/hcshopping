@@ -1,0 +1,37 @@
+#news-group{
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-bottom: 30px     
+}
+
+#ng-title{
+      border-bottom: 1px solid black; 
+      background-color: red;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+}
+
+#ng-title h4{
+      color: white;
+}
+
+#news{
+      border-left: 2px solid black; 
+      height: 50%;
+      padding-left: 15px; 
+}
+
+.list-news{
+      list-style-type: none;
+      padding-left: 20px;
+      margin-top: 16px;
+}
+
+.content-blog {
+      padding-bottom: 30px;
+  }
+
+  .content-Relates-news {
+      font-size: 10px;
+      padding-bottom: 15px;
+  }
