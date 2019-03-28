@@ -15,6 +15,9 @@
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Login-sign-up CSS File -->
+    <link rel="stylesheet" href="css/login-sign-up.css">
+
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -175,7 +178,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog-grid.html">Blog</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -198,10 +201,8 @@
             </button>
             <!--/ Cart end/-->
 
-            <button type="button" class="btn btn-b-n d-none d-md-block">
-                <a href="login.html" class="text-white">
-                    <span class="fa fa-user"></span>
-                </a>
+            <button type="button" class="btn btn-b-n" data-toggle="modal" data-target="#login-sign-up">
+                <span class="fa fa-user"></span>
             </button>
         </div>
     </nav>
@@ -233,6 +234,121 @@
         </div>
     </section>
     <!--/ Intro Single End /-->
+
+    <!-- Begin modal -->
+    <div class="modal fade" id="login-sign-up" role="dialog ">
+        <div class="modal-dialog modal-lg">
+            <!-- begin modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- bengin modal body -->
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div id="box-login-sign" class="col-md-7">
+
+                            <ul class="nav nav-tabs nav-pills">
+                                <li><a href="#login" class="nav-link active" data-toggle="tab">Login </a></li>
+                                <li><a href="#sign-up" class="nav-link" data-toggle="tab">Sign in</a></li>
+                            </ul>
+
+                            <!-- begin tab content -->
+                            <div class="tab-content">
+                                <!-- begin login -->
+                                <div id="login" class="tab-pane fade-in active">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="user">User :</label>
+                                            <input type="text" class="form-control" id="user"
+                                                placeholder="Enter your Id or Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password :</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox">Remember me ?</label>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary">Login</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">Forget your password ?</a><br>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end login -->
+
+                                <!-- begin sign up -->
+                                <div id="sign-up" class="tab-pane fade">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="user">User :</label>
+                                            <input type="text" class="form-control" id="user-sign"
+                                                placeholder="Enter your user">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone-number">Phone number :</label>
+                                            <input type="text" class="form-control" id="phone-number-sign"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email :</label>
+                                            <input type="text" class="form-control" id="email-sign"
+                                                placeholder="Enter your Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password :</label>
+                                            <input type="password" class="form-control" id="password-sign"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="re-password">Repassword :</label>
+                                            <input type="password" class="form-control" id="re-password-sign"
+                                                placeholder="Enter your password again">
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <button class="btn btn-primary">Sign In</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end sign up -->
+
+                            </div>
+                            <!-- end tab content -->
+                        </div>
+
+                        <div class="col-md-5">
+                            <div id="lw-title">
+                                <h4>LOGIN WITH</h3>
+                            </div>
+                            <hr>
+                            <div id="login-with">
+                                <a href="#"><button style="background-color:#4267b2;"
+                                        class="btn btn-default">FACEBOOK</button></a>
+                                <a href="#"><button style="background-color: orangered;"
+                                        class="btn btn-default">GOOGLE</button></a>
+                                <a href="#"><button style="background-color: #55aded;"
+                                        class="btn btn-default">Twitter</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end modal body -->
+
+            </div>
+            <!-- end modal content -->
+
+        </div>
+    </div>
+
     <div class="container">
         <!--/ Title /-->
         <div class="row font-weight-bold">
@@ -331,42 +447,42 @@
         <hr>
         <!--/ Item /-->
         <div class="row pt-3">
-                <div class="col-sm-6">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="images/product-3.jpg" style="width:80%" class="rounded float-left" alt="...">
-                        </div>
-                        <div class="col-8 pt-4">
-                            Product 1
-                        </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/product-3.jpg" style="width:80%" class="rounded float-left" alt="...">
                     </div>
-                </div>
-                <div class="col-sm-2 pt-4">
-                    $ 12.000
-                </div>
-                <div class="col-sm-2 pt-4">
-                    <div class="form-group" style="width: 70px">
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-2 pt-4">
-                    <div class="col-4 font-weight-bold">
-                        <a class="btn btn-danger" href="#" role="button">REMOVE</a>
+                    <div class="col-8 pt-4">
+                        Product 1
                     </div>
                 </div>
             </div>
-            <!--/ End of Item /-->
+            <div class="col-sm-2 pt-4">
+                $ 12.000
+            </div>
+            <div class="col-sm-2 pt-4">
+                <div class="form-group" style="width: 70px">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-2 pt-4">
+                <div class="col-4 font-weight-bold">
+                    <a class="btn btn-danger" href="#" role="button">REMOVE</a>
+                </div>
+            </div>
+        </div>
+        <!--/ End of Item /-->
         <hr>
         <div class="row pt-3 justify-content-end">
             <div class="col-4 font-weight-bold">Total</div>

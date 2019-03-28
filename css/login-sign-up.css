@@ -2,8 +2,16 @@
     border-right: 2px solid black;
 }
 
+#login label{
+    padding-top: 5px;
+}
+
 #login button{
     width: 100%;
+}
+
+#sign-up label{
+    padding-top: 5px;
 }
 
 #sign-up button{
