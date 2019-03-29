@@ -286,6 +286,12 @@ body {
   color: #ffffff;
   font-size: 2rem;
 }
+.card-info li button {
+  color: #ffffff;
+  /* font-size: 2rem; */
+
+}
+
 /* button buy */
 .card-body-a {
   z-index: 2;
@@ -330,7 +336,7 @@ body {
   position: absolute;
   z-index: 2;
   background-color: #E82C0C;
-  padding-top: 10px;
+  padding-top: 5px;
 }
   
   .title-box-d {
@@ -959,7 +965,7 @@ body {
     color: #ffffff;
     padding: 1rem 1.5rem;
     border: 2px solid #E82C0C;
-    border-radius: 50px;
+    /* border-radius: 50px; */
     text-transform: uppercase;
     letter-spacing: 0.030em;
   }
