@@ -2,7 +2,7 @@ let jeansjson = new Request("./data/jeans.json")
 
 function productTemplate(product) {
     return `
-    <div class=" col-md-4">
+    <div class="col-md-4">
     <div class="card-box-a card-shadow">
         <div class="img-box-a">
             <img src="${product.photo}" alt="" class="img-a img-fluid">
@@ -11,13 +11,14 @@ function productTemplate(product) {
             <div class="card-overlay-a-content">
                 <div class="card-header-a">
                     <h2 class="card-title-a">
-                        <a href="${product.link}">${product.name}</a>
+                        <span class="cart-item-title">${product.title}</span>
                     </h2>
                 </div>
                 <div class="card-body-a">
                     <div class="price-box d-flex py-3">
-                        <a href="#"><span class="price-a">Buy | $ ${product.price}</span></a>
+                        <span class="price-a">$${product.price}</span>
                     </div>
+
                     <a href="${product.link}" class="link-a">Click here to view
                         <span class="ion-ios-arrow-forward"></span>
                     </a>
@@ -25,16 +26,23 @@ function productTemplate(product) {
                 <div class="card-footer-a">
                     <ul class="card-info d-flex justify-content-around">
                         <li>
-                            <i class="fas fa-thumbs-up"></i>
+                            <button type="button" class="btn btn-link shop-item-button"><i
+                                    class="fa fa-cart-plus"></i></button>
                         </li>
                         <li>
-                            <i class="fa fa-facebook"></i>
+                            <button type="button" class="btn btn-link"><i
+                                    class="fa fa-facebook"></i></button>
+
                         </li>
                         <li>
-                            <i class="fa fa-twitter"></i>
+                            <button type="button" class="btn btn-link"><i
+                                    class="fa fa-twitter"></i></button>
+
                         </li>
                         <li>
-                            <i class="fa fa-instagram"></i>
+                            <button type="button" class="btn btn-link"><i
+                                    class="fa fa-instagram"></i></button>
+
                         </li>
                     </ul>
                 </div>
