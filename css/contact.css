@@ -2,13 +2,22 @@
     display: block;
 }
 
-#img-map a img{
-    width:540px 
+iframe{
+    width: 100%;
 }
 
 #contact-content{
     padding: 15px;
-    height: 472px;
+    height: 100%;
+}
+
+.icon-contact{
+    width: 100%;
+}
+
+.icon-contact button{
+    width: 100%;
+    margin-bottom: 15px; 
 }
 
 #btn-google{
