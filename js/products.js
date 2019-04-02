@@ -1,4 +1,62 @@
-let projson = new Request("./data/products.json")
+const productsData = [
+    {
+        "name": "product 1",
+        "price": "12.000",
+        "photo": "images/product-1.jpeg",
+        "link": "http://127.0.0.1:5500/product-details-1.html"
+    },
+    {
+        "name": "product 2",
+        "price": "14.000",
+        "photo": "images/product-2.jpg",
+        "link": "http://127.0.0.1:5500/product-details-2.html"
+    },
+    {
+        "name": "product 3",
+        "price": "4.000",
+        "photo": "images/product-3.jpg",
+        "link": "http://127.0.0.1:5500/product-details-3.html"
+    },
+    {
+        "name": "product 4",
+        "price": "8.000",
+        "photo": "images/product-4.jpg",
+        "link": "http://127.0.0.1:5500/product-details-4.html"
+    },
+    {
+        "name": "product 1",
+        "price": "12.000",
+        "photo": "images/product-1.jpeg",
+        "link": "http://127.0.0.1:5500/product-details-1.html"
+    },
+    {
+        "name": "product 2",
+        "price": "14.000",
+        "photo": "images/product-2.jpg",
+        "link": "http://127.0.0.1:5500/product-details-2.html"
+    },
+    {
+        "name": "product 3",
+        "price": "4.000",
+        "photo": "images/product-3.jpg",
+        "link": "http://127.0.0.1:5500/product-details-3.html"
+    },
+    {
+        "name": "product 4",
+        "price": "8.000",
+        "photo": "images/product-4.jpg",
+        "link": "http://127.0.0.1:5500/product-details-4.html"
+    },
+    {
+        "name": "product 4",
+        "price": "8.000",
+        "photo": "images/product-4.jpg",
+        "link": "http://127.0.0.1:5500/product-details-4.html"
+    }
+]
+
+
+// let projson = new Request("./data/products.json")
 
 function productTemplate(product) {
     return `
@@ -54,15 +112,17 @@ function productTemplate(product) {
     `
 }
 
-fetch(projson)
-    .then(function (resp) {
-        return resp.json();
-    })
-    .then(function (productsData) {
-        document.getElementById("productall").innerHTML = `
-        ${productsData.map(productTemplate).join(' ')}
+// fetch(projson)
+//     .then(function (resp) {
+//         return resp.json();
+//     })
+//     .then(function (productsData) {
+//         document.getElementById("productall").innerHTML = `
+//         ${productsData.map(productTemplate).join(' ')}
+//         `
+//     })
+
+
+document.getElementById("productall").innerHTML = `
+         ${productsData.map(productTemplate).join(' ')}
         `
-    })
-
-
-
