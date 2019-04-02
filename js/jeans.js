@@ -1,4 +1,32 @@
-let jeansjson = new Request("./data/jeans.json")
+const jeans = [
+    {
+        "name": "product 1",
+        "price": "12.000",
+        "photo": "images/product-1.jpeg",
+        "link": "http://127.0.0.1:5500/product-details-1.html"
+    },
+    {
+        "name": "product 2",
+        "price": "14.000",
+        "photo": "images/product-2.jpg",
+        "link": "http://127.0.0.1:5500/product-details-2.html"
+    },
+    {
+        "name": "product 3",
+        "price": "4.000",
+        "photo": "images/product-3.jpg",
+        "link": "http://127.0.0.1:5500/product-details-3.html"
+    },
+    {
+        "name": "product 4",
+        "price": "8.000",
+        "photo": "images/product-4.jpg",
+        "link": "http://127.0.0.1:5500/product-details-4.html"
+    }
+]
+
+
+// let jeansjson = new Request("./data/jeans.json")
 
 function productTemplate(product) {
     return `
@@ -11,7 +39,7 @@ function productTemplate(product) {
             <div class="card-overlay-a-content">
                 <div class="card-header-a">
                     <h2 class="card-title-a">
-                        <span class="cart-item-title">${product.title}</span>
+                        <span class="cart-item-title">${product.name}</span>
                     </h2>
                 </div>
                 <div class="card-body-a">
@@ -53,15 +81,19 @@ function productTemplate(product) {
     `
 }
 
-fetch(jeansjson)
-    .then(function (resp) {
-        return resp.json();
-    })
-    .then(function (productsData) {
-        document.getElementById("jeansdata").innerHTML = `
-        ${productsData.map(productTemplate).join(' ')}
-        `
-    })
+// fetch(jeansjson)
+//     .then(function (resp) {
+//         return resp.json();
+//     })
+//     .then(function (productsData) {
+//         document.getElementById("jeansdata").innerHTML = `
+//         ${productsData.map(productTemplate).join(' ')}
+//         `
+//     })
 
+
+    document.getElementById("jeansdata").innerHTML = `
+        ${jeans.map(productTemplate).join(' ')}
+        `
 
 
