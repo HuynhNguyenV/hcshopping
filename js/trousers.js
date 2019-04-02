@@ -1,4 +1,23 @@
-let trousersjson = new Request("./data/trousers.json")
+const trousers = [
+    {
+        "name": "product 2",
+        "price": "14.000",
+        "photo": "images/product-2.jpg",
+        "link": "http://127.0.0.1:5500/product-details-2.html"
+    },
+    {
+        "name": "product 3",
+        "price": "4.000",
+        "photo": "images/product-3.jpg",
+        "link": "http://127.0.0.1:5500/product-details-3.html"
+    },
+    {
+        "name": "product 4",
+        "price": "8.000",
+        "photo": "images/product-4.jpg",
+        "link": "http://127.0.0.1:5500/product-details-4.html"
+    }
+]
 
 function productTemplate(product) {
     return `
@@ -11,7 +30,7 @@ function productTemplate(product) {
             <div class="card-overlay-a-content">
                 <div class="card-header-a">
                     <h2 class="card-title-a">
-                        <span class="cart-item-title">${product.title}</span>
+                        <span class="cart-item-title">${product.name}</span>
                     </h2>
                 </div>
                 <div class="card-body-a">
@@ -53,15 +72,17 @@ function productTemplate(product) {
     `
 }
 
-fetch(trousersjson)
-    .then(function (resp) {
-        return resp.json();
-    })
-    .then(function (productsData) {
-        document.getElementById("trousersdata").innerHTML = `
-        ${productsData.map(productTemplate).join(' ')}
-        `
-    })
+// fetch(trousersjson)
+//     .then(function (resp) {
+//         return resp.json();
+//     })
+//     .then(function (productsData) {
+//         document.getElementById("trousersdata").innerHTML = `
+//         ${productsData.map(productTemplate).join(' ')}
+//         `
+//     })
 
-
+document.getElementById("trousersdata").innerHTML = `
+    ${trousers.map(productTemplate).join(' ')}
+    `
 
