@@ -1,62 +1,86 @@
-const productsData = [
-    {
-        "name": "product 1",
-        "price": "12.000",
-        "photo": "images/product-1.jpeg",
-        "link": "http://127.0.0.1:5500/product-details-1.html"
-    },
-    {
-        "name": "product 2",
-        "price": "14.000",
-        "photo": "images/product-2.jpg",
-        "link": "http://127.0.0.1:5500/product-details-2.html"
-    },
-    {
-        "name": "product 3",
-        "price": "4.000",
-        "photo": "images/product-3.jpg",
-        "link": "http://127.0.0.1:5500/product-details-3.html"
-    },
-    {
-        "name": "product 4",
-        "price": "8.000",
-        "photo": "images/product-4.jpg",
-        "link": "http://127.0.0.1:5500/product-details-4.html"
-    },
-    {
-        "name": "product 1",
-        "price": "12.000",
-        "photo": "images/product-1.jpeg",
-        "link": "http://127.0.0.1:5500/product-details-1.html"
-    },
-    {
-        "name": "product 2",
-        "price": "14.000",
-        "photo": "images/product-2.jpg",
-        "link": "http://127.0.0.1:5500/product-details-2.html"
-    },
-    {
-        "name": "product 3",
-        "price": "4.000",
-        "photo": "images/product-3.jpg",
-        "link": "http://127.0.0.1:5500/product-details-3.html"
-    },
-    {
-        "name": "product 4",
-        "price": "8.000",
-        "photo": "images/product-4.jpg",
-        "link": "http://127.0.0.1:5500/product-details-4.html"
-    },
-    {
-        "name": "product 4",
-        "price": "8.000",
-        "photo": "images/product-4.jpg",
-        "link": "http://127.0.0.1:5500/product-details-4.html"
-    }
-]
+document.getElementById('btnAll').addEventListener('click', getAllProduts)
+getAllProduts()
+document.getElementById('btnJeans').addEventListener('click', getJeans)
+document.getElementById('btnShirts').addEventListener('click', getShirts)
+document.getElementById('btnTrousers').addEventListener('click', getTrousers)
+
+// GET Trousers
+function getTrousers() {
+    fetch('data/trousers.json')
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (data) {
+            console.log(data)
+            let output = ''
+            data.forEach(function (product) { 
+                output += productTemplate(product)
+            })
+            document.getElementById('output').innerHTML = output
+        })
+        .catch(function (err) {
+            console.log(err)
+        })      
+}
 
 
-// let projson = new Request("./data/products.json")
+// GET Shirts
+function getShirts() {
+    fetch('data/shirts.json')
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (data) {
+            console.log(data)
+            let output = ''
+            data.forEach(function (product) { 
+                output += productTemplate(product)
+            })
+            document.getElementById('output').innerHTML = output
+        })
+        .catch(function (err) {
+            console.log(err)
+        })      
+}
+
+
+// GET Jeans
+function getJeans() {
+    fetch('data/jeans.json')
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (data) {
+            console.log(data)
+            let output = ''
+            data.forEach(function (product) { 
+                output += productTemplate(product)
+            })
+            document.getElementById('output').innerHTML = output
+        })
+        .catch(function (err) {
+            console.log(err)
+        })      
+}
+
+// GET All
+function getAllProduts() {
+    fetch('data/products.json')
+        .then(function (res) {
+            return res.json()
+        })
+        .then(function (data) {
+            console.log(data)
+            let output = ''
+            data.forEach(function (product) { 
+                output += productTemplate(product)
+            })
+            document.getElementById('output').innerHTML = output
+        })
+        .catch(function (err) {
+            console.log(err)
+        })      
+}
 
 function productTemplate(product) {
     return `
@@ -111,18 +135,3 @@ function productTemplate(product) {
 </div>
     `
 }
-
-// fetch(projson)
-//     .then(function (resp) {
-//         return resp.json();
-//     })
-//     .then(function (productsData) {
-//         document.getElementById("productall").innerHTML = `
-//         ${productsData.map(productTemplate).join(' ')}
-//         `
-//     })
-
-
-document.getElementById("productall").innerHTML = `
-         ${productsData.map(productTemplate).join(' ')}
-        `

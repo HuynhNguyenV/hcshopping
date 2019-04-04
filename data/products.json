@@ -46,11 +46,5 @@
         "price": "8.000",
         "photo": "images/product-4.jpg",
         "link": "http://127.0.0.1:5500/product-details-4.html"
-    },
-    {
-        "name": "product 4",
-        "price": "8.000",
-        "photo": "images/product-4.jpg",
-        "link": "http://127.0.0.1:5500/product-details-4.html"
     }
 ]
