@@ -1,11 +1,13 @@
 [
     {
+        "id": "9",
         "name": "product 3",
         "price": "4.000",
         "photo": "images/product-3.jpg",
         "link": "http://127.0.0.1:5500/product-details-3.html"
     },
     {
+        "id": "10",
         "name": "product 4",
         "price": "8.000",
         "photo": "images/product-4.jpg",
