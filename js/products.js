@@ -11,7 +11,6 @@ function getTrousers() {
             return res.json()
         })
         .then(function (data) {
-            console.log(data)
             let output = ''
             data.forEach(function (product) { 
                 output += productTemplate(product)
@@ -31,7 +30,6 @@ function getShirts() {
             return res.json()
         })
         .then(function (data) {
-            console.log(data)
             let output = ''
             data.forEach(function (product) { 
                 output += productTemplate(product)
@@ -51,7 +49,6 @@ function getJeans() {
             return res.json()
         })
         .then(function (data) {
-            console.log(data)
             let output = ''
             data.forEach(function (product) { 
                 output += productTemplate(product)
@@ -70,7 +67,6 @@ function getAllProduts() {
             return res.json()
         })
         .then(function (data) {
-            console.log(data)
             let output = ''
             data.forEach(function (product) { 
                 output += productTemplate(product)
@@ -93,6 +89,7 @@ function productTemplate(product) {
             <div class="card-overlay-a-content">
                 <div class="card-header-a">
                     <h2 class="card-title-a">
+                        <span class="cart-id d-none">${product.id}</span>
                         <span class="cart-item-title">${product.name}</span>
                     </h2>
                 </div>
