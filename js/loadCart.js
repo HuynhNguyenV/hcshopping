@@ -1,21 +1,44 @@
 
-class Shop {
-    constructor(title, price, imageSrc){
-        this.title = title
-        this.price = price
-        this.imageSrc = imageSrc
-    }
+function Shop(id, title, price, imageSrc, link) {
+    this.id = id
+    this.title = title
+    this.price = price
+    this.imageSrc = imageSrc
+    this.link
 }
 
-class UI {
-    addShopToList(shop){
-        var cartRow = document.createElement('div')
+loadShop()
+
+function loadShop() {
+    displayShops()    
+}
+
+function displayShops(){
+    const shops = getShops()
+    shops.forEach(function(shop){
+        addShopToList(shop)
+    })
+}
+
+function getShops(){
+    let shops
+    if (localStorage.getItem('listsData') === null) {
+        shops = []
+    } else {
+        shops = JSON.parse(localStorage.getItem('listsData'))
+    }
+    return shops
+}
+
+function addShopToList(shop){
+    var cartRow = document.createElement('div')
         cartRow.classList.add('cart-row')
         var cartItems = document.getElementsByClassName('cart-items')[0]
         // var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
         var cartRowContents = `
             <div class="cart-item cart-column">
                 <img class="cart-item-image" src="${shop.imageSrc}" width="100" height="100">
+                <span class="cart-id d-none">${shop.id}</span>
                 <span class="cart-item-title">${shop.title}</span>
             </div>
             <span class="cart-price cart-column">${shop.price}</span>
@@ -25,31 +48,6 @@ class UI {
             </div>`
         cartRow.innerHTML = cartRowContents
         cartItems.append(cartRow)
-    }
-}
-
-class Store {
-    static getshops(){
-        let shops
-        if(localStorage.getItem('shops') === null){
-            shops = []
-        }else {
-            shops = JSON.parse(localStorage.getItem('shops'))
-        }
-        return shops
-    }
-
-    static displayShops(){
-        const shops = Store.getBooks()
-        console.log(shops)
-        shops.forEach(function(shop){
-            const ui = new UI
-            // Add book to UI
-            ui.addBookToList(shop)
-        })
-    }
-
-
 }
 
 
