@@ -1,47 +1,53 @@
-if(document.readyState == 'loading'){
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
+ready()
 
-function Shop(title, price, imageSrc){
+function Shop(id, title, price, imageSrc, link) {
+    this.id = id
     this.title = title
     this.price = price
     this.imageSrc = imageSrc
+    this.link
 }
 
-function ready(){
-    var addToCartButtons = document.getElementsByClassName('shop-item-button')
-    for(var i = 0; i < addToCartButtons.length; i++){
-        var button = addToCartButtons[i]
+function ready() {
+    var addToCartButtons = document.querySelectorAll('.shop-item-button')
+    addToCartButtons.forEach(function (button) {
         button.addEventListener('click', addToCarClicked)
-    }
-
+    })
 }
 
-function addToCarClicked(event){
-    var button = event
-    var shopItem = button.path[7]
-    var title = shopItem.getElementsByClassName('cart-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('price-a')[0].innerText.replace('$','')
-    
-    var imageSrc = shopItem.getElementsByClassName('img-a')[0].src
-    // console.log(title, price, imageSrc)
-    
-    // Add item cart
-    // addItemCart(title, price, imageSrc)
+function addToCarClicked(event) {
+    // card-header-a
+    let cartHeader = event.target.parentElement.parentElement.parentElement
+        .parentElement.previousElementSibling.previousElementSibling
+    // card-body-a
+    let cartBody = event.target.parentElement.parentElement.parentElement
+        .parentElement.previousElementSibling
+    // img-box
+    let imgBox = event.target.parentElement.parentElement.parentElement
+        .parentElement.parentElement.parentElement.previousElementSibling
+    // GET ID
+    let id = cartHeader.children[0].children[0].textContent
+    // GET NAME
+    let name = cartHeader.children[0].children[1].textContent
+    // GET PRICE
+    let price = cartBody.children[0].children[0].textContent
+    let finalPrice = price.slice(1).trim()
+    // GET LINK
+    let link = cartBody.children[1].href
+    // console.log(id, name, finalPrice,, im link)
+    // GET IMAGE
+    let imageSrc = imgBox.children[0].src
+    let pos = imageSrc.indexOf('images') 
+    let pathImage = imageSrc.slice(pos)
 
-    const shop = new Shop(title, price, imageSrc)
-
+    const shop = new Shop(id, name, finalPrice, pathImage, link)
     // addCartInLocalStorage
     addCartInLocalStorage(shop)
-    
-
 }
 
 // save local storage
-function addCartInLocalStorage(shop){
-    let listsData 
+function addCartInLocalStorage(shop) {
+    let listsData
     if (localStorage.getItem('listsData') === null) {
         listsData = []
     } else {
@@ -49,8 +55,8 @@ function addCartInLocalStorage(shop){
     }
 
     listsData.push(shop)
-    localStorage.setItem('listsData', JSON.stringify(listsData))  
-    console.log('save ok')  
+    localStorage.setItem('listsData', JSON.stringify(listsData))
+    console.log('save ok')
 }
 
 
