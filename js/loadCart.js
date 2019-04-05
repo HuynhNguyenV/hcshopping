@@ -11,9 +11,14 @@ loadShop()
 
 function loadShop() {
     displayShops()
+    updateCartTotal()
     // quantityInputs
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
-    // console.log(quantityInputs)
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
+
 
     // remove cart
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
@@ -21,8 +26,15 @@ function loadShop() {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
-    
+}
 
+// Check error input quantity
+function quantityChanged(event){
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
 }
 
 function displayShops() {
@@ -42,7 +54,7 @@ function getShops() {
     return shops
 }
 
-function removeCartItem(event){
+function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     var id = buttonClicked.parentElement.previousElementSibling.previousElementSibling.children[1].textContent
@@ -50,17 +62,17 @@ function removeCartItem(event){
 }
 
 // Remove from LS
-function removeTaskFromLocalStorage(idshop){
+function removeTaskFromLocalStorage(idshop) {
     let listsData;
     if (localStorage.getItem('listsData') === null) {
         listsData = []
     } else {
         listsData = JSON.parse(localStorage.getItem('listsData'))
     }
-    listsData.forEach(function(id, index){
-        if(idshop === id.id){
+    listsData.forEach(function (id, index) {
+        if (idshop === id.id) {
             listsData.splice(index, 1)
-            
+
         }
     })
     localStorage.setItem('listsData', JSON.stringify(listsData))
@@ -85,6 +97,23 @@ function addShopToList(shop) {
             </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+}
+
+// update cart total
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
+    }
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 }
 
 

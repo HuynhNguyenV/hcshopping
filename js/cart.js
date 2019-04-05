@@ -5,7 +5,7 @@ function Shop(id, title, price, imageSrc, link) {
     this.title = title
     this.price = price
     this.imageSrc = imageSrc
-    this.link
+    this.link = link
 }
 
 function ready() {
