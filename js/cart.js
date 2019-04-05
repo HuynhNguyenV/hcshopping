@@ -13,6 +13,28 @@ function ready() {
     addToCartButtons.forEach(function (button) {
         button.addEventListener('click', addToCarClicked)
     })
+
+    updateCount()
+}
+
+function updateCount(){
+    const shops = getShops()
+    document.getElementsByClassName('badge-light')[0].textContent = shops.length
+    // if(shops.length === 0){
+    //     count.className = 'd-none'
+    // }
+    //     count.textContent = shops.length
+}
+
+// get shop
+function getShops() {
+    let shops
+    if (localStorage.getItem('listsData') === null) {
+        shops = []
+    } else {
+        shops = JSON.parse(localStorage.getItem('listsData'))
+    }
+    return shops
 }
 
 function addToCarClicked(event) {
@@ -43,6 +65,7 @@ function addToCarClicked(event) {
     const shop = new Shop(id, name, finalPrice, pathImage, link)
     // addCartInLocalStorage
     addCartInLocalStorage(shop)
+    updateCount()
 }
 
 // save local storage

@@ -12,6 +12,7 @@ loadShop()
 function loadShop() {
     displayShops()
     updateCartTotal()
+    updateCount()
     // quantityInputs
     var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
@@ -26,6 +27,11 @@ function loadShop() {
         var button = removeCartItemButtons[i]
         button.addEventListener('click', removeCartItem)
     }
+}
+// update count
+function updateCount(){
+    const shops = getShops()
+    document.getElementsByClassName('badge-light')[0].textContent = shops.length
 }
 
 // Check error input quantity
@@ -59,6 +65,8 @@ function removeCartItem(event) {
     buttonClicked.parentElement.parentElement.remove()
     var id = buttonClicked.parentElement.previousElementSibling.previousElementSibling.children[1].textContent
     removeTaskFromLocalStorage(id)
+    updateCartTotal()
+    updateCount()
 }
 
 // Remove from LS
