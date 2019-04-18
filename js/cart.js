@@ -20,10 +20,6 @@ function ready() {
 function updateCount(){
     const shops = getShops()
     document.getElementsByClassName('badge-light')[0].textContent = shops.length
-    // if(shops.length === 0){
-    //     count.className = 'd-none'
-    // }
-    //     count.textContent = shops.length
 }
 
 // get shop
