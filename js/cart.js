@@ -17,16 +17,13 @@ function ready() {
     updateCount()
 }
 
+// Update Count
 function updateCount(){
     const shops = getShops()
     document.getElementsByClassName('badge-light')[0].textContent = shops.length
-    // if(shops.length === 0){
-    //     count.className = 'd-none'
-    // }
-    //     count.textContent = shops.length
 }
 
-// get shop
+// Get shop
 function getShops() {
     let shops
     if (localStorage.getItem('listsData') === null) {
@@ -37,34 +34,37 @@ function getShops() {
     return shops
 }
 
+// Add Cart
 function addToCarClicked(event) {
-    // card-header-a
+    // Get card-header-a
     let cartHeader = event.target.parentElement.parentElement.parentElement
         .parentElement.previousElementSibling.previousElementSibling
-    // card-body-a
+    // Get card-body-a
     let cartBody = event.target.parentElement.parentElement.parentElement
         .parentElement.previousElementSibling
-    // img-box
+    // Get img-box
     let imgBox = event.target.parentElement.parentElement.parentElement
         .parentElement.parentElement.parentElement.previousElementSibling
-    // GET ID
+    // Get ID
     let id = cartHeader.children[0].children[0].textContent
-    // GET NAME
+    // Get NAME
     let name = cartHeader.children[0].children[1].textContent
-    // GET PRICE
+    // Get PRICE
     let price = cartBody.children[0].children[0].textContent
     let finalPrice = price.slice(1).trim()
-    // GET LINK
+    // Get LINK
     let link = cartBody.children[1].href
-    // console.log(id, name, finalPrice,, im link)
+
     // GET IMAGE
     let imageSrc = imgBox.children[0].src
     let pos = imageSrc.indexOf('images') 
     let pathImage = imageSrc.slice(pos)
 
     const shop = new Shop(id, name, finalPrice, pathImage, link)
-    // addCartInLocalStorage
+    // Add Cart In LocalStorage
     addCartInLocalStorage(shop)
+
+    // Update count
     updateCount()
 }
 
