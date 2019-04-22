@@ -15,6 +15,9 @@
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Login-sign-up CSS File -->
+    <link rel="stylesheet" href="css/login-sign-up.css">
+
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -146,7 +149,9 @@
                 <span></span>
                 <span></span>
             </button>
-            <a class="navbar-brand text-brand" href="index.html">Huynh<span class="color-b">Chien</span></a>
+            <a class="navbar-brand text-brand" href="index.html">
+                <img src="images/H3C.png" alt="logo" height="50" width="80">
+            </a>
 
             <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none"
                 data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-expanded="false">
@@ -161,20 +166,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="shop.html" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="shop.html">Jeans</a>
-                            <a class="dropdown-item" href="shop.html">T-Shirts</a>
-                            <a class="dropdown-item" href="shop.html">Jumpers & Cardigans</a>
-                            <a class="dropdown-item" href="shop.html">Shirts</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog-grid.html">Blog</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -197,10 +193,8 @@
             </button>
             <!--/ Cart end/-->
 
-            <button type="button" class="btn btn-b-n d-none d-md-block">
-                <a href="login.html" class="text-white">
-                    <span class="fa fa-user"></span>
-                </a>
+            <button type="button" class="btn btn-b-n" data-toggle="modal" data-target="#login-sign-up">
+                <span class="fa fa-user"></span>
             </button>
         </div>
     </nav>
@@ -235,6 +229,123 @@
         </div>
     </section>
     <!--/ Intro Single End /-->
+
+    <!-- begin modal -->
+    <div class="modal fade" id="login-sign-up" role="dialog ">
+        <div class="modal-dialog modal-lg">
+            <!-- begin modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- bengin modal body -->
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div id="box-login-sign" class="col-md-7">
+
+                            <ul class="nav nav-tabs nav-pills">
+                                <li ><a href="#login" class="nav-link active" data-toggle="tab">Login </a></li>
+                                <li><a href="#sign-up" class="nav-link" data-toggle="tab">Sign in</a></li>
+                            </ul>
+
+                            <!-- begin tab content -->
+                            <div class="tab-content">
+                                <!-- begin login -->
+                                <div id="login" class="tab-pane fade-in active">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="user">User :</label>
+                                            <input type="text" class="form-control" id="user"
+                                                placeholder="Enter your Id or Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password :</label>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox">Remember me ?</label>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary">Login</button>
+                                        </div>
+                                        <div>
+                                            <a href="#">Forget your password ?</a><br>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end login -->
+
+                                <!-- begin sign up -->
+                                <div id="sign-up" class="tab-pane fade">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="user">User :</label>
+                                            <input type="text" class="form-control" id="user-sign"
+                                                placeholder="Enter your user">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone-number">Phone number :</label>
+                                            <input type="text" class="form-control" id="phone-number-sign"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email :</label>
+                                            <input type="text" class="form-control" id="email-sign"
+                                                placeholder="Enter your Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password :</label>
+                                            <input type="password" class="form-control" id="password-sign"
+                                                placeholder="Enter your password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="re-password">Repassword :</label>
+                                            <input type="password" class="form-control" id="re-password-sign"
+                                                placeholder="Enter your password again">
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <button class="btn btn-primary">Sign In</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end sign up -->
+
+                            </div>
+                            <!-- end tab content -->
+                        </div>
+
+                        <div class="col-md-5">
+                            <div id="lw-title">
+                                <h4>LOGIN WITH</h3>
+                            </div>
+                            <hr>
+                            <div id="login-with">
+                                <a href="#"><button
+                                        style="background-color:#4267b2;"
+                                        class="btn btn-default">FACEBOOK</button></a>
+                                <a href="#"><button
+                                        style="background-color: orangered;"
+                                        class="btn btn-default">GOOGLE</button></a>
+                                <a href="#"><button
+                                        style="background-color: #55aded;"
+                                        class="btn btn-default">Twitter</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end modal body -->
+
+            </div>
+            <!-- end modal content -->
+
+        </div>
+    </div>
 
     <!--/ Agent Single Star /-->
     <section class="agent-single">
@@ -337,19 +448,53 @@
                     <div class="col-md-4">
                         <div class="card-box-a card-shadow">
                             <div class="img-box-a">
+                                <img src="images/product-1.jpeg" alt="" class="img-a img-fluid">
+                            </div>
+                            <div class="card-overlay">
+                                <div class="card-overlay-a-content">
+                                    <div class="card-header-a">
+                                        <h2 class="card-title-a">
+                                            <span class="cart-id d-none">1</span>
+                                            <span class="cart-item-title">product 1</span>
+                                        </h2>
+                                    </div>
+                                    <div class="card-body-a">
+                                        <div class="price-box d-flex py-3">
+                                            <span class="price-a">$12</span>
+                                        </div>
+                                        <a href="product-details-1.html" class="link-a">Click here to view
+                                            <span class="ion-ios-arrow-forward"></span>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer-a">
+                                        <ul class="card-info d-flex justify-content-around">
+                                            <li>
+                                                <button type="button" class="btn btn-link shop-item-button">
+                                                    <i class="fa fa-cart-plus"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-box-a card-shadow">
+                            <div class="img-box-a">
                                 <img src="images/product-2.jpg" alt="" class="img-a img-fluid">
                             </div>
                             <div class="card-overlay">
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="#">206 Mount
-                                                <br /> Olive Road Two</a>
+                                            <span class="cart-id d-none">2</span>
+                                            <span class="cart-item-title">product 2</span>
                                         </h2>
                                     </div>
                                     <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                        <div class="price-box d-flex py-3">
+                                            <span class="price-a">$22</span>
                                         </div>
                                         <a href="#" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
@@ -358,12 +503,9 @@
                                     <div class="card-footer-a">
                                         <ul class="card-info d-flex justify-content-around">
                                             <li>
-                                                <h4 class="card-info-title">Size</h4>
-                                                <span>XL</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">View</h4>
-                                                <span>4000</span>
+                                                <button type="button" class="btn btn-link shop-item-button">
+                                                    <i class="fa fa-cart-plus"></i>
+                                                </button>
                                             </li>
                                         </ul>
                                     </div>
@@ -380,13 +522,13 @@
                                 <div class="card-overlay-a-content">
                                     <div class="card-header-a">
                                         <h2 class="card-title-a">
-                                            <a href="#">206 Mount
-                                                <br /> Olive Road Two</a>
+                                            <span class="cart-id d-none">3</span>
+                                            <span class="cart-item-title">product 3</span>
                                         </h2>
                                     </div>
                                     <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <a href="#"><span class="price-a">buy | $ 12.000</span></a>
+                                        <div class="price-box d-flex py-3">
+                                            <span class="price-a">$33</span>
                                         </div>
                                         <a href="#" class="link-a">Click here to view
                                             <span class="ion-ios-arrow-forward"></span>
@@ -395,12 +537,9 @@
                                     <div class="card-footer-a">
                                         <ul class="card-info d-flex justify-content-around">
                                             <li>
-                                                <h4 class="card-info-title">Size</h4>
-                                                <span>XL</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">View</h4>
-                                                <span>4000</span>
+                                                <button type="button" class="btn btn-link shop-item-button">
+                                                    <i class="fa fa-cart-plus"></i>
+                                                </button>
                                             </li>
                                         </ul>
                                     </div>
@@ -408,44 +547,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card-box-a card-shadow">
-                            <div class="img-box-a">
-                                <img src="images/product-4.jpg" alt="" class="img-a img-fluid">
-                            </div>
-                            <div class="card-overlay">
-                                <div class="card-overlay-a-content">
-                                    <div class="card-header-a">
-                                        <h2 class="card-title-a">
-                                            <a href="#">206 Mount
-                                                <br /> Olive Road Two</a>
-                                        </h2>
-                                    </div>
-                                    <div class="card-body-a">
-                                        <div class="price-box d-flex">
-                                            <a href="#"><span class="price-a">buy | $ 12.000</span></a>
-                                        </div>
-                                        <a href="#" class="link-a">Click here to view
-                                            <span class="ion-ios-arrow-forward"></span>
-                                        </a>
-                                    </div>
-                                    <div class="card-footer-a">
-                                        <ul class="card-info d-flex justify-content-around">
-                                            <li>
-                                                <h4 class="card-info-title">Size</h4>
-                                                <span>XL</span>
-                                            </li>
-                                            <li>
-                                                <h4 class="card-info-title">View</h4>
-                                                <span>4000</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -558,6 +659,7 @@
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
     <div id="preloader"></div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -574,6 +676,7 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
