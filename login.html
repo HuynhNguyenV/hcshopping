@@ -31,7 +31,12 @@
             width: 100%;
             height: 100%;
         }
+
+        #change_click {
+            display: none;
+        }
     </style>
+    <script src="js/login.js"></script>
 </head>
 
 <body>
@@ -167,7 +172,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Shop
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Jeans</a>
                             <a class="dropdown-item" href="#">T-Shirts</a>
                             <a class="dropdown-item" href="#">Jumpers & Cardigans</a>
@@ -180,6 +185,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="change_click" href="#" onclick="profile_user()">Profile</a>
+                    </li>
                 </ul>
             </div>
             <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block"
@@ -189,8 +197,15 @@
             <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block">
                 <span class="fa fa-cart-plus"></span>
             </button>
-            <button type="button" class="btn btn-b-n" data-toggle="modal" data-target="#login-sign-up">
-                <span class="fa fa-user"></span>
+            <button type="button" class="btn btn-b-n " data-toggle="modal" data-target="#login-sign-up">
+                <span class="fa fa-user" id="user-dropdown"></span>
+                <!--<div id="sign_in" class="dropdown-menu" style="display: none">-->
+                <!--<p class="dropdown-item" id="hello_user"></p>-->
+                <!--<a class="dropdown-item" href="#">My Oder</a>-->
+                <!--<a class="dropdown-item" href="#">My Notice</a>-->
+                <!--<a class="dropdown-item" href="#">My Profile</a>-->
+                <!--<a class="dropdown-item" href="#">Log Out</a>-->
+                <!--</div>-->
             </button>
         </div>
     </nav>
@@ -234,11 +249,12 @@
                 <div class="modal-body">
 
                     <div class="row">
+                        <h4 class="text-center col-md-12" id="login-success"></h4>
 
                         <div id="box-login-sign" class="col-md-7">
 
                             <ul class="nav nav-tabs nav-pills">
-                                <li ><a href="#login" class="nav-link active" data-toggle="tab">Login </a></li>
+                                <li><a href="#login" class="nav-link active" data-toggle="tab">Login </a></li>
                                 <li><a href="#sign-up" class="nav-link" data-toggle="tab">Sign in</a></li>
                             </ul>
 
@@ -249,11 +265,13 @@
                                     <form action="">
                                         <div class="form-group">
                                             <label for="user">User :</label>
+                                            <p class="warning" id="user-warning-log"></p>
                                             <input type="text" class="form-control" id="user"
                                                 placeholder="Enter your Id or Email">
                                         </div>
                                         <div class="form-group">
                                             <label for="password">Password :</label>
+                                            <p class="warning" id="pass-warning-log"></p>
                                             <input type="password" class="form-control" id="password"
                                                 placeholder="Enter your password">
                                         </div>
@@ -261,7 +279,8 @@
                                             <label><input type="checkbox">Remember me ?</label>
                                         </div>
                                         <div>
-                                            <button class="btn btn-success">Login</button>
+                                            <button class="btn btn-success" TYPE="button"
+                                                onclick="checklogin()">Login</button>
                                         </div>
                                         <div>
                                             <a href="#">Forget your password ?</a><br>
@@ -279,7 +298,7 @@
                                                 placeholder="Enter your user">
                                         </div>
                                         <div class="form-group">
-                                            <label for="phone-number">Phone number :</label>
+                                            <label for="Phone-number">Phone number :</label>
                                             <input type="text" class="form-control" id="phone-number-sign"
                                                 placeholder="Enter your password">
                                         </div>
@@ -311,20 +330,17 @@
                             <!-- end tab content -->
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-5" id="login-with-tabs">
                             <div id="lw-title">
-                                <h4>LOGIN WITH</h3>
+                                <h4>LOGIN WITH</h4>
                             </div>
                             <hr>
                             <div id="login-with">
-                                <a href="#"><button
-                                        style="background-color:#4267b2;"
+                                <a href="#"><button style="background-color:#4267b2;"
                                         class="btn btn-default">FACEBOOK</button></a>
-                                <a href="#"><button
-                                        style="background-color: orangered;"
+                                <a href="#"><button style="background-color: orangered;"
                                         class="btn btn-default">GOOGLE</button></a>
-                                <a href="#"><button
-                                        style="background-color: #55aded;"
+                                <a href="#"><button style="background-color: #55aded;"
                                         class="btn btn-default">Twitter</button></a>
                             </div>
                         </div>
@@ -336,6 +352,32 @@
             </div>
             <!-- end modal content -->
 
+        </div>
+    </div>
+    <!--information-->
+    <div class="container" id="information" style="display: none">
+        <div class="row">
+            <h4 class="text-center col-sm-12" id="hello_user"></h4>
+            <nav class="col-sm-3">
+                <ul class="nav nav-tabs nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                    <li class="text-center" style="width: 100%"><a class="nav-link active"
+                            href="#section1">Imformation</a></li>
+                    <li class="text-center" style="width: 100%"><a class="nav-link" href="#section2">Purchase
+                            Customer</a></li>
+                    <li class="text-center" style="width: 100%"><a class="nav-link" href="#section3">Notification</a>
+                    </li>
+                    <li class="text-center" style="width: 100%"><a class="nav-link" href="#section4">History
+                            Purchase</a></li>
+                </ul>
+            </nav>
+            <div class="col-sm-9" id="change_infor" style="border-left: 1px solid gray">
+                <div id="infor_user" style="line-height: 15px;">
+                </div>
+                <div class="row" style="float: right; padding-top: 10px;" >
+                    <button type="button" style="margin-right: 15px;" class="btn btn-primary">Change</button>
+                    <button type="button" class="btn btn-primary">save</button>
+                </div>
+            </div>
         </div>
     </div>
 
